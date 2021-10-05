@@ -5,7 +5,7 @@ General
 
     1. What are nested loops and how to use them
     2. What is a function and how do you use functions
-    What is the difference between a declaration and a definition of a function
+    3. What is the difference between a declaration and a definition of a function
     What is a prototype
     Scope of variables
     What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
