@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * main: the function principal in the program holbeton school.
- * void: documentation.
- * return: 0.
- **/
+ * main - Write a program that prints _putchar, followed by a new line ollowed
+ * Return: Always 0.
+ */
 
 int main(void)
 {
