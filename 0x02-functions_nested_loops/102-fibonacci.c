@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include "main.h"
     /**
-  * main - sum even fibonacci numbers under 4 million.
-  * Return: Nothing.
+  * main - main write a program that prints the first 50 Fibonacci numbers.
+  * Return: 0.
   */
 int main(void)
 {
