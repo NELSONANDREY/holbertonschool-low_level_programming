@@ -9,7 +9,7 @@
 char *leet(char *n)
 {
 	char lts[] = "aAeEoOtTlL";
-	char nro[] = "4433807711";
+	char nro[] = "4433007711";
 	int i, j;
 
 	for (i = 0; n[i] != '\0'; i++)
