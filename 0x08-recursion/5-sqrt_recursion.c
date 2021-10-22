@@ -2,6 +2,7 @@
 /**
  * aux - checks for perfect square
  * @n: input
+ * @i: input
  * Return: Always 0 (Success)
  */
 int aux(int n, int i)
@@ -14,14 +15,13 @@ int aux(int n, int i)
 	return (-1);
 }
 /**
- * _sqrt_recursion - no loop, 1. 
- * @i: input
+ * _sqrt_recursion - no loop, 1.
  * @n: input
  * Return: Always 0 (Success)
  */
 int _sqrt_recursion(int n)
 {
-	int i;
-	i = 0;
-	return aux(n, i);
+	int i = 0;
+
+	return (aux(n, i));
 }
