@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * create_array - main entry
- * @size: size input
+ * @size: size input inr
  * @c: char
  * Return: 0
  */
