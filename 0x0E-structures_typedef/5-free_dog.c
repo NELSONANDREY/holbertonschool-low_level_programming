@@ -1,17 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_dog - function that prints a struct dog
+ * @d: The dog structure
+ * return: if name is NULL, print Name: (nil))
  */
-int main(void)
+void free_dog(dog_t *d)
 {
-    dog_t *my_dog;
-
-    my_dog = new_dog("Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
-    free_dog(my_dog);
-    return (0);
+	free(p->name); free(p->owner); free(p);
 }
