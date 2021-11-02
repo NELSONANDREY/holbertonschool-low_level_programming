@@ -5,11 +5,11 @@
 /**
  * free_dog - function that free a struct dog
  * @d: The dog structure
- * return: if name is NULL, print Name: (nil))
+ * return: no return
  */
 void free_dog(dog_t *d)
 {
-	free(p->name);
-	free(p->owner);
-	free(p);
+	free(d->name);
+	free(d->owner);
+	free(d);
 }
