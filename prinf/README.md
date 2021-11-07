@@ -22,4 +22,7 @@ All of the following files are scripts:
 
 
 
+
+![myimage-alt-tag](https://github.com/NELSONANDREY/holbertonschool-low_level_programming/blob/main/ejemplos/PRINT%20F%20-%201.drawio.png)
+
 CREATED BY MIGDALIS LAPAGE AND NELSON GALLEGO FOR HOLBERTON
