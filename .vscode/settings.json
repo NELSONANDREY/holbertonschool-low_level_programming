@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"function_pointers.h": "c"
+	},
+	"cmake.configureOnOpen": true
+}
