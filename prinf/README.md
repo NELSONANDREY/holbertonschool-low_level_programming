@@ -17,7 +17,7 @@ All of the following files are scripts:
 | `5-s` | Displays the first 10 lines of `/etc/passwd` |
 | `6-e` | Displays the third line of the file `iacta` |
 | `7-e` | Creates a file named exactly `\*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)` containing the test `Holberton School` ending by a new line |
-| `8-e` | Writes into the file `ls_cwd_content` the result of the command `ls -la`. |
+| `8-e` | Writes into the file `ls_cwd_content` the result of the es command `ls -la`. |
 | `9-e` | Duplicates the last line of the file `iacta` |
 
 
