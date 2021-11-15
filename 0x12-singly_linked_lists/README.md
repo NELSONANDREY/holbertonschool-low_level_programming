@@ -13,9 +13,7 @@ All of the following files are scripts:
 
 | Filename | Description |
 | -------- | ----------- |
-| `WEW2E` | Prints "Hello, World", followed by a new line to the standard output |
-| `1-W` | Displays a confused smiley `"(Ôo)'` |
-| `2-e` | Displays the content of the `/etc/passwd`file |
+
 
 
 
