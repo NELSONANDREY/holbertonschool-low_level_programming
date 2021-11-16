@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_listint - Entry Point
+ * listint_len - Entry Point
  * @h: head
  * Return: 0
  */
