@@ -1,6 +1,6 @@
 #0x13. C - Bit manipulation
 
-## Description
+## Description:
 What you should learn from this project:
 
 * Look for the right source of information without too much help
