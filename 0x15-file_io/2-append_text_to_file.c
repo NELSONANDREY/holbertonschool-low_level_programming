@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
   * append_text_to_file - appends text to a file
   * @filename: file to append to, if NULL, return -1
@@ -7,18 +8,18 @@
   */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int append_file, len, wr_stat;
+	int plus, j, wr_stat;
 
 	if (filename == NULL)
 		return (-1);
-	append_file = open(filename, O_WRONLY | O_APPEND);
-	if (append_file == -1)
+	plus = open(filename, O_WRONLY | O_APPEND);
+	if (plus == -1)
 		return (-1);
 	if (text_content == NULL)
 		return (1);
-	for (len = 0; text_content[len]; len++)
+	for (j = 0; text_content[j]; j++)
 		;
-	wr_stat = write(append_file, text_content, len);
-	close(append_file);
-	return (wr_stat == -1 ? -1 : 1);
+	wr = write(wr, text_content, j);
+	close(plus);
+	return (wr == -1 ? -1 : 1);
 }
