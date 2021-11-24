@@ -14,7 +14,7 @@ if (filename == NULL)
 return (-1);
 
 plus = open(filename, O_WRONLY | O_APPEND);
-if (plus == NULL)
+if (plus == -1)
 return (-1);
 if (text_content == NULL)
 return (1);
