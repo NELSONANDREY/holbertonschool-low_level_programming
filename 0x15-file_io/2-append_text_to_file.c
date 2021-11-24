@@ -13,7 +13,7 @@ int plus, j, wr;
 if (filename == NULL)
 return (-1);
 
-plus = open(filename, 0_WRONLY | 0_APPEND);
+plus = open(filename, O_WRONLY | O_APPEND);
 if (plus == NULL)
 return (-1);
 if (text_content == NULL)
