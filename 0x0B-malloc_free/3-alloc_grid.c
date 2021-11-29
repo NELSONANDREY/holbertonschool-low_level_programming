@@ -1,32 +1,41 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
 /**
- * array_range - get len, malloc * len
- * loop size of len to insert min++ into new arr
- * @min: min input
- * @max: max input
- * Return: pointer to new arr of ints
- */
-int *array_range(int min, int max)
+ * alloc_grid - grid of integers
+ * @width: int width
+ * @height: int height
+ * Return: () pointer created
+*/
+int **alloc_grid(int width, int height)
 {
-	int *arr;
-	int i, len;
+	short int i, j;
+	int **ma;
 
-	if (min > max)
+	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	for (len = 0; len < (max - min); len++)
-		;
-
-	arr = malloc(sizeof(int) * (len + 1));
-	if (arr == NULL)
+	ma = (int **) malloc(sizeof(int *) * height);
+	if (ma == NULL)
 		return (NULL);
-
-	for (i = 0; i <= len; i++)
+	for (i = 0; i < height; i++)
 	{
-		arr[i] = min++;
+		ma[i] = (int *) malloc(sizeof(int) * width);
+		if (ma[i] == NULL)
+		{
+			for (; i >= 0; i--)
+				free(ma[i]);
+			free(ma);
+			return (NULL);
+		}
 	}
 
-	return (arr);
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			ma[i][j] = 0;
+		}
+	}
+	return (ma);
 }

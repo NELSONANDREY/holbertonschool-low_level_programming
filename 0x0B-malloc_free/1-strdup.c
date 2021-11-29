@@ -1,32 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
+#include"main.h"
+#include<stdlib.h>
 /**
- * _strdup - main entry
- * @size: size input inr
- * @c: char
- * Return: 0
- */
-
+ * _strdup - duplicate string whit reserve malloc
+ * @str: string to duplicate
+ * Return: () pointer created
+*/
 char *_strdup(char *str)
 {
-	int i; end;
-	char *array;
+	char *ma;
+	int i = 0, j;
 
 	if (str == NULL)
 	return (NULL);
-
-	for (end = 0; end <= *str; end++)
-	{
-		
-	}
-	end += 1;
-	array = malloc(sizeof(char) * end);
-	
-
-
-
-
-
-
+	while (str[i] != '\0')
+	i++;
+	ma = malloc(sizeof(char) * i + 1);
+	if (ma == 0)
+	return (NULL);
+	for (j = 0; j < i; j++)
+	ma[j] = str[j];
+	return (ma);
 }
