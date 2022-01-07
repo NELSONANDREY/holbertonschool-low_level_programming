@@ -1,35 +1,33 @@
 #include "lists.h"
-
 /**
-*delete_dnodeint_at_index - Deletes a node from a dlistint_t at a given index.
-*@head: A pointer to the head of the dlistint_t.
-*@index: The index of the node to delete.
-*Return: Upon success
-*/
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+ * insert_dnodeint_at_index - insert node
+ * @h: doucble pointer
+ * @idx: index
+ * @n: value
+ * Return: dlistint_t*
+ */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *tmp = *head;
+	dlistint_t *select_node = *h;
+	dlistint_t *new_node;
 
-	if (*head == NULL)
-		return (-1);
-	for (; index != 0; index--)
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+	for (; idx != 1; idx--)
 	{
-		if (tmp == NULL)
-			return (-1);
-		tmp = tmp->next;
+		select_node = select_node->next;
+		if (select_node == NULL)
+			return (NULL);
 	}
-	if (tmp == *head)
-	{
-		*head = tmp->next;
-		if (*head != NULL)
-			(*head)->prev = NULL;
-	}
-	else
-	{
-		tmp->prev->next = tmp->next;
-		if (tmp->next != NULL)
-			tmp->next->prev = tmp->prev;
-	}
-	free(tmp);
-	return (1);
+	if (select_node->next == NULL)
+		return (add_dnodeint_end(h, n));
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
+	new_node->prev = select_node;
+	new_node->next = select_node->next;
+	select_node->next->prev = new_node;
+	select_node->next = new_node;
+	return (new_node);
 }
