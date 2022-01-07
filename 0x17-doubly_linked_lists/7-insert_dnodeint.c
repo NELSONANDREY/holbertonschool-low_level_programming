@@ -1,52 +1,35 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts node at index
- * @h: head of node
- * @idx: index to insert node
- * @n: data for new node
- * Return: list with inserted node
- */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+*delete_dnodeint_at_index - Deletes a node from a dlistint_t at a given index.
+*@head: A pointer to the head of the dlistint_t.
+*@index: The index of the node to delete.
+*Return: Upon success
+*/
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int count = 1;
-	dlistint_t *temp = NULL, *new = NULL;
+	dlistint_t *tmp = *head;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL || h == NULL)
-		return (NULL);
-	new->n = n;
-	temp = *h;
-	if (idx == 0)
+	if (*head == NULL)
+		return (-1);
+	for (; index != 0; index--)
 	{
-		*h = new;
-		new->next = temp;
-		new->prev = NULL;
-		temp->prev = new;
-		return (new);
+		if (tmp == NULL)
+			return (-1);
+		tmp = tmp->next;
 	}
-	while (temp->next != NULL)
+	if (tmp == *head)
 	{
-		if (count == idx) /* found back */
-		{
-			new->prev = temp; /* current prev to back link */
-			new->next = temp->next; /* current next to front link*/
-			temp->next = new; /* back next link */
-			new->next->prev = new; /* from prev link */
-		}
-		temp = temp->next;
-		count++;
+		*head = tmp->next;
+		if (*head != NULL)
+			(*head)->prev = NULL;
 	}
-	if (count == idx) /* end of DLL */
+	else
 	{
-		new->prev = temp; /* current prev to back link */
-		new->next = NULL; /* current next to NULL*/
-		temp->next = new; /* back next link */
+		tmp->prev->next = tmp->next;
+		if (tmp->next != NULL)
+			tmp->next->prev = tmp->prev;
 	}
-	if (count < idx)
-	{
-		free(new);
-		return (NULL);
-	}
-	return (new);
+	free(tmp);
+	return (1);
 }
