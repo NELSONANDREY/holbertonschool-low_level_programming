@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+/**
+ *add -  add two numbers.
+ *@a: number 1.
+ *@b: number 2.
+ *Return: add
+ */
+int add(int a, int b) {
+	return a + b;
+}
+
+/**
+ *sub -  sub two numbers.
+ *@a: number 1.
+ *@b: number 2.
+ *Return: sub
+ */
+int sub(int a, int b) {
+	return a - b;
+}
+/**
+ *mul -  mul two numbers.
+ *@a: number 1.
+ *@b: number 2.
+ *Return: sub
+ */
+int mul(int a, int b) {
+	return a * b;
+}
+/**
+ *div -  div two numbers.
+ *@a: number 1.
+ *@b: number 2.
+ *Return: sub
+ */
+int div(int a, int b) {
+	return a / b;
+}
+/**
+ *mod -  mod two numbers.
+ *@a: number 1.
+ *@b: number 2.
+ *Return: sub
+ */
+int mod(int a, int b) {
+	return a % b;
+}
