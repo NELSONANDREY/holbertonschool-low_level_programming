@@ -1,7 +1,7 @@
 Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-General2
+General22
 
     1. What are nested loops and how to use them
     2. What is a function and how do you use functions
